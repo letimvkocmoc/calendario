@@ -8,17 +8,17 @@ cursor = conn.cursor()
 # Создаем таблицу, если она еще не существует, с указанием значений по умолчанию для строковых полей
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS schedule (
-        id INTEGER PRIMARY KEY,
-        date TEXT,
-        hour TEXT,
-        is_available BOOLEAN,
-        user_id INTEGER DEFAULT 0,
-        username TEXT DEFAULT '',
-        first_name TEXT DEFAULT '',
-        last_name TEXT DEFAULT '',
-        phonenumber TEXT DEFAULT '',
-        last_haircut TEXT DEFAULT ''
-    )
+    id INTEGER PRIMARY KEY,
+    date TEXT,
+    hour TEXT,
+    is_available INTEGER, 
+    user_id INTEGER DEFAULT 0,
+    username TEXT DEFAULT '',
+    first_name TEXT DEFAULT '',
+    last_name TEXT DEFAULT '',
+    phonenumber TEXT DEFAULT '',
+    last_haircut TEXT DEFAULT ''
+);
 ''')
 
 # Генерируем и добавляем записи в базу данных
